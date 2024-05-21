@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>ISTEA</title>
+  </head>
+  <body>
+    <header>
+      <h1>ISTEA</h1>
+    </header>
+
+    <main>
+      <section>
+        <hr />
+        <div>
+          <p>
+            <strong>ID:</strong>
+            <span id="user-id"></span>
+          </p>
+        </div>
+        <div>
+          <label for="user-name"><strong>Nombre:</strong></label>
+          <input type="text" id="user-name" />
+        </div>
+        <div>
+          <label for="user-debt"><strong>Deuda:</strong></label>
+          <input type="text" id="user-debt" />
+        </div>
+        <button type="button">Agregar</button>
+        <button type="button" id="update-user">Actualizar</button>
+      </section>
+
+      <section>
+        <hr />
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Deuda</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="container"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
