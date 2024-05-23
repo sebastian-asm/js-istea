@@ -1,13 +1,13 @@
 import { users } from './db.js'
 
 function app() {
-  renderHTML()
+  renderUserHTML()
   const updateUserButton = document.querySelector('#update-user')
   updateUserButton.addEventListener('click', updateUser)
 }
 
-function renderHTML() {
-  const container = document.querySelector('#container')
+function renderUserHTML() {
+  const container = document.querySelector('#container-users')
   container.innerHTML = ''
   for (const user of users) {
     container.innerHTML += `
@@ -35,7 +35,7 @@ function deleteUser(event) {
   if (user.deuda > 0) return
   const indexUser = users.indexOf(user)
   users.splice(indexUser, 1)
-  renderHTML()
+  renderUserHTML()
 }
 
 function selectUser(event) {
@@ -56,7 +56,7 @@ function updateUser() {
   if (user) {
     user.nombre = nameUser
     user.deuda = debtUser
-    renderHTML()
+    renderUserHTML()
   }
 }
 
