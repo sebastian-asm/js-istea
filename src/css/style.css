@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header,
+main {
+  padding: 20px;
+}
+
+ol {
+  padding: 20px;
+
+  li {
+    margin: 10px 0;
+
+    a {
+      text-decoration: none;
+      color: darkblue;
+
+      &:hover {
+        text-decoration: underline;
+        color: blue;
+      }
+    }
+  }
+}
