@@ -6,7 +6,8 @@ const options = [
   { title: 'Eliminar nombres de listado (checkbox)', path: './05-eliminar-nombres-checkbox/index.html' },
   { title: 'Duplicar nombres', path: './06-duplicar-nombres/index.html' },
   { title: 'Ordenar nombres (ascendente y descendente)', path: './07-ordenar-nombres/index.html' },
-  { title: 'Pasar a mayúsculas/minúsculas', path: './08-mayusculas-minusculas/index.html' }
+  { title: 'Pasar a mayúsculas/minúsculas', path: './08-mayusculas-minusculas/index.html' },
+  { title: 'Seleccionar solo un nombre', path: './09-seleccionar-un-nombre/index.html' }
 ]
 
 function app() {
