@@ -1,5 +1,5 @@
 const options = [
-  { title: 'Administrador de usuarios', path: './01-admin-usuarios/index.html' },
+  { title: 'Administrador de usuarios (clases en vivo)', path: './01-admin-usuarios-(clase)/index.html' },
   { title: 'Convertir a mayúsculas', path: './02-mayusculas/index.html' },
   { title: 'Agregar nombres a listado', path: './03-listado-nombres/index.html' },
   { title: 'Eliminar nombres de listado (botón)', path: './04-eliminar-nombres-button/index.html' },

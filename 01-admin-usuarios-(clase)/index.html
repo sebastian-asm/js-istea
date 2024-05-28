@@ -8,9 +8,9 @@
   </head>
   <body>
     <header>
-      <h1>Administrador de usuarios</h1>
+      <h1 class="title">Administrador de usuarios</h1>
+      <p class="subtitle"><em>Ejercicio de clase en vivo</em></p>
     </header>
-
     <main>
       <section>
         <hr />
@@ -28,12 +28,13 @@
           <label for="user-debt"><strong>Deuda:</strong></label>
           <input type="text" id="user-debt" />
         </div>
-        <button type="button">Agregar</button>
-        <button type="button" id="update-user">Actualizar</button>
+        <button type="button" id="add-user">Agregar</button>
+        <button type="button" id="update-user" disabled>Actualizar</button>
+        <button type="button" id="cancel-update" disabled>Cancelar</button>
       </section>
-
       <section>
         <hr />
+        <button type="button" id="order-list">Ordenar lista</button>
         <table>
           <thead>
             <tr>
