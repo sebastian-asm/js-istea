@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habilita o deshabilita caja de texto</title>
+    <style>
+      section {
+        margin: 30px 0;
+      }
+
+      input:disabled {
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Habilita o deshabilita caja de texto</h1>
+    </header>
+    <main>
+      <section>
+        <button type="button" id="action">Habilitar o deshabilitar</button>
+      </section>
+      <section>
+        <hr />
+        <label for="text">Texto:</label>
+        <input type="text" id="text" />
+      </section>
+    </main>
+    <script>
+      function app() {
+        const buttonAction = document.querySelector('#action')
+        const inputText = document.querySelector('#text')
+        buttonAction.addEventListener('click', () => (inputText.disabled = !inputText.disabled))
+      }
+
+      document.addEventListener('DOMContentLoaded', app)
+    </script>
+  </body>
+</html>

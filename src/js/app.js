@@ -7,7 +7,8 @@ const options = [
   { title: 'Duplicar nombres', path: './06-duplicar-nombres/index.html' },
   { title: 'Ordenar nombres (ascendente y descendente)', path: './07-ordenar-nombres/index.html' },
   { title: 'Pasar a mayúsculas/minúsculas', path: './08-mayusculas-minusculas/index.html' },
-  { title: 'Seleccionar solo un nombre', path: './09-seleccionar-un-nombre/index.html' }
+  { title: 'Seleccionar solo un nombre', path: './09-seleccionar-un-nombre/index.html' },
+  { title: 'Habilita o deshabilita caja de texto', path: './10-habilita-deshabilita-texto/index.html' }
 ]
 
 function app() {

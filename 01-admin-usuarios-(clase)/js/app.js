@@ -5,10 +5,7 @@ const $$ = (selectorName) => document.querySelectorAll(selectorName)
 
 function app() {
   renderListHTML()
-  $('#update-user').addEventListener('click', updateUser)
-  $('#add-user').addEventListener('click', addUser)
-  $('#cancel-update').addEventListener('click', cancelUpdate)
-  $('#order-list').addEventListener('click', orderByName)
+  buttonsAction()
 }
 
 function renderListHTML() {
@@ -32,6 +29,13 @@ function renderListHTML() {
   $$('#select-user').forEach((button) => button.addEventListener('click', selectUser))
 }
 
+function buttonsAction() {
+  $('#update-user').addEventListener('click', updateUser)
+  $('#add-user').addEventListener('click', addUser)
+  $('#cancel-update').addEventListener('click', cancelUpdate)
+  $('#order-list').addEventListener('click', orderByName)
+}
+
 function deleteUser(event) {
   const { value } = event.target
   const user = getUser(value)
@@ -43,10 +47,10 @@ function deleteUser(event) {
 }
 
 function selectUser(event) {
-  editionMode(true)
   const { value } = event.target
   const user = getUser(value)
   if (user) {
+    editionMode(true)
     $('#user-id').textContent = user.id
     $('#user-name').value = user.nombre
     $('#user-debt').value = user.deuda
