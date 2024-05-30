@@ -9,7 +9,8 @@ const options = [
   { title: 'Pasar a mayúsculas/minúsculas', path: './08-mayusculas-minusculas/index.html' },
   { title: 'Seleccionar solo un nombre', path: './09-seleccionar-un-nombre/index.html' },
   { title: 'Habilita o deshabilita caja de texto', path: './10-habilita-deshabilita-texto/index.html' },
-  { title: 'Habilitar 100 inputs de textos', path: './11-habilitar-100-inputs/index.html' }
+  { title: 'Habilitar 100 inputs de textos', path: './11-habilitar-100-inputs/index.html' },
+  { title: 'Sumar 2 números', path: './12-sumador/index.html' }
 ]
 
 function app() {
