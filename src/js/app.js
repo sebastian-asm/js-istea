@@ -12,7 +12,8 @@ const options = [
   { title: 'Habilitar 100 inputs de textos', path: './11-habilitar-100-inputs/index.html' },
   { title: 'Sumar 2 números', path: './12-sumador/index.html' },
   { title: 'Incrementar o decrementar un número', path: './13-incrementar-decrementar/index.html' },
-  { title: 'Buscar nombre en listado', path: './14-buscar-nombre/index.html' }
+  { title: 'Buscar nombre en listado', path: './14-buscar-nombre/index.html' },
+  { title: 'Agregar mensajes a una lista', path: './15-agregar-mensajes/index.html' }
 ]
 
 function app() {

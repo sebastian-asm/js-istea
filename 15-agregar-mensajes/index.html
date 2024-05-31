@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar mensajes a una lista</title>
+    <style>
+      section {
+        margin: 30px 0;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Agregar mensajes a una lista</h1>
+    </header>
+    <main>
+      <section>
+        <label for="message">Escriba un mensaje, luego presione <em>Enter</em>:</label>
+        <input type="text" id="message" placeholder="Mensaje..." />
+      </section>
+      <section>
+        <hr />
+        <h3>Lista de mensajes</h3>
+        <ul id="container"></ul>
+      </section>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
