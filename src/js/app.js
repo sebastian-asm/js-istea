@@ -14,7 +14,8 @@ const options = [
   { title: 'Incrementar o decrementar un número', path: './13-incrementar-decrementar/index.html' },
   { title: 'Buscar nombre en listado', path: './14-buscar-nombre/index.html' },
   { title: 'Agregar mensajes a una lista', path: './15-agregar-mensajes/index.html' },
-  { title: 'Lista desplegable', path: './16-lista-desplegable/index.html' }
+  { title: 'Lista desplegable', path: './16-lista-desplegable/index.html' },
+  { title: 'Session Storage', path: './17-session-storage/index.html' }
 ]
 
 function app() {

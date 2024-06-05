@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage - Reporte</title>
+    <style>
+      p {
+        padding: 20px;
+        background-color: #eee;
+        max-width: 400px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Session Storage - Reporte</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./reporte.html">Reporte</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="container">
+      <hr />
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('#container')
+        const p = document.createElement('p')
+        const message = sessionStorage.getItem('message')
+
+        if (message) {
+          p.textContent = message
+          container.appendChild(p)
+        }
+      })
+    </script>
+  </body>
+</html>
