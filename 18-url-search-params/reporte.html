@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Search Params - Reporte</title>
+    <style>
+      p {
+        padding: 20px;
+        background-color: #eee;
+        max-width: 400px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>URL Search Params - Reporte</h1>
+    </header>
+    <main>
+      <section>
+        <hr />
+        <a href="./index.html">Volver al inicio</a>
+      </section>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const searchParams = new URLSearchParams(location.search)
+        if (searchParams.has('message')) {
+          const link = document.querySelector('a')
+          const p = document.createElement('p')
+          p.innerHTML = `<strong>Mensaje:</strong> ${searchParams.get('message')}`
+          link.insertAdjacentElement('beforebegin', p)
+        }
+      })
+    </script>
+  </body>
+</html>
