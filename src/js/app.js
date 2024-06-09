@@ -16,7 +16,8 @@ const options = [
   { title: 'Agregar mensajes a una lista', path: './15-agregar-mensajes/index.html' },
   { title: 'Lista desplegable', path: './16-lista-desplegable/index.html' },
   { title: 'Session Storage', path: './17-session-storage/index.html' },
-  { title: 'URL Search Params', path: './18-url-search-params/index.html' }
+  { title: 'URL Search Params', path: './18-url-search-params/index.html' },
+  { title: 'Session Storage (listado)', path: './19-session-storage-listado/index.html' }
 ]
 
 function app() {
