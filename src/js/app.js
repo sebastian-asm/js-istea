@@ -18,7 +18,8 @@ const options = [
   { title: 'Session Storage', path: './17-session-storage/index.html' },
   { title: 'URL Search Params', path: './18-url-search-params/index.html' },
   { title: 'Session Storage (listado)', path: './19-session-storage-listado/index.html' },
-  { title: 'Contador de navegaciones', path: './20-contador-navegacion/index.html' }
+  { title: 'Contador de navegaciones', path: './20-contador-navegacion/index.html' },
+  { title: 'Modo oscuro o claro', path: './21-modo-oscuro-claro/index.html' }
 ]
 
 function app() {
