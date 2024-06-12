@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Usuario seleccionado</title>
+  </head>
+  <body>
+    <header>
+      <h1>Usuario seleccionado</h1>
+    </header>
+    <main>
+      <section>
+        <hr />
+        <a href="./index.html" class="link">Volver al inicio</a>
+        <div>
+          <p>
+            <strong>ID:</strong>
+            <span id="user-id"></span>
+          </p>
+        </div>
+        <div>
+          <label for="user-name"><strong>Nombre:</strong></label>
+          <input type="text" id="user-name" />
+        </div>
+        <div>
+          <label for="user-debt"><strong>Deuda:</strong></label>
+          <input type="text" id="user-debt" />
+        </div>
+        <button type="button" id="update-user">Actualizar</button>
+      </section>
+    </main>
+    <script type="module" src="./js/updateUser.js"></script>
+  </body>
+</html>

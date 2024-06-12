@@ -1,14 +1,15 @@
-import { users } from './db.js'
-
-const $ = (selectorName) => document.querySelector(selectorName)
-const $$ = (selectorName) => document.querySelectorAll(selectorName)
+import { $, $$, setUsers, getUsers } from './utils.js'
+import usersDB from './db.js'
 
 function app() {
+  const users = getUsers()
+  if (!users) setUsers(usersDB)
   renderListHTML()
-  buttonsAction()
+  $('#order-list').addEventListener('click', orderByName)
 }
 
 function renderListHTML() {
+  const users = getUsers()
   $('#container-users').innerHTML = ''
   for (const user of users) {
     const { id, nombre, deuda } = user
@@ -18,8 +19,8 @@ function renderListHTML() {
         <td>${nombre}</td>
         <td>$${deuda}</td>
         <td>
-          <button type="button" id="select-user" value="${id}">Seleccionar</button>
           <button type="button" id="delete-user" value="${id}">Eliminar</button>
+          <button type="button" id="select-user" value="${id}">Seleccionar</button>
         </td>
       </tr>
     `
@@ -29,74 +30,30 @@ function renderListHTML() {
   $$('#select-user').forEach((button) => button.addEventListener('click', selectUser))
 }
 
-function buttonsAction() {
-  $('#update-user').addEventListener('click', updateUser)
-  $('#add-user').addEventListener('click', addUser)
-  $('#cancel-update').addEventListener('click', cancelUpdate)
-  $('#order-list').addEventListener('click', orderByName)
-}
-
 function deleteUser(event) {
+  let users = getUsers()
   const { value } = event.target
-  const user = getUser(value)
+  const user = getUserById(value)
   if (user.deuda === 0) {
-    const indexUser = users.indexOf(user)
-    users.splice(indexUser, 1)
+    users = users.filter((user) => user.id !== +value)
+    setUsers(users)
     renderListHTML()
   }
 }
 
 function selectUser(event) {
   const { value } = event.target
-  const user = getUser(value)
-  if (user) {
-    editionMode(true)
-    $('#user-id').textContent = user.id
-    $('#user-name').value = user.nombre
-    $('#user-debt').value = user.deuda
-  }
+  location.href = `./select-user.html?id=${value}`
 }
 
-function updateUser() {
-  const idUser = $('#user-id').textContent
-  const user = getUser(idUser)
-  if (user) {
-    user.nombre = $('#user-name').value
-    user.deuda = +$('#user-debt').value
-    editionMode(false)
-    renderListHTML()
-    clearForm()
-  }
-}
-
-function addUser() {
-  const nameUser = $('#user-name').value
-  const debtUser = $('#user-debt').value
-  const newId = users.length > 0 ? getNewId() : 1
-  if (nameUser.trim() !== '' && debtUser.trim() !== '') {
-    users.push({ id: newId, nombre: nameUser, deuda: +debtUser })
-    renderListHTML()
-    clearForm()
-  }
-}
-
-function getUser(id) {
+function getUserById(id) {
+  const users = getUsers()
   const user = users.find((user) => user.id === +id)
   return user
 }
 
-function getNewId() {
-  const ids = users.map((users) => users.id)
-  const newId = Math.max(...ids) + 1
-  return newId
-}
-
-function cancelUpdate() {
-  clearForm()
-  editionMode(false)
-}
-
 function orderByName() {
+  const users = getUsers()
   users.sort((user1, user2) => {
     const name1 = user1.nombre.toLowerCase()
     const name2 = user2.nombre.toLowerCase()
@@ -104,20 +61,8 @@ function orderByName() {
     else if (name1 < name2) return -1
     else return 0
   })
+  setUsers(users)
   renderListHTML()
 }
 
-function clearForm() {
-  $('#user-id').textContent = ''
-  $('#user-name').value = ''
-  $('#user-debt').value = ''
-}
-
-function editionMode(active) {
-  $('#update-user').disabled = !active
-  $('#cancel-update').disabled = !active
-  $('#add-user').disabled = active
-}
-
-// init app
 document.addEventListener('DOMContentLoaded', app)

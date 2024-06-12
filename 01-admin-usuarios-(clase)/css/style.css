@@ -13,13 +13,23 @@ th {
   padding: 5px;
 }
 
-th {
+tr:nth-child(even) {
   background-color: #eee;
+}
+
+th {
+  background-color: #555;
+  color: #fff;
 }
 
 section,
 div {
   margin: 15px 0;
+}
+
+button,
+input {
+  padding: 5px;
 }
 
 button:disabled {
@@ -32,4 +42,9 @@ button:disabled {
 
 .subtitle {
   margin-top: 5px;
+}
+
+.link {
+  display: block;
+  margin: 20px 0;
 }
