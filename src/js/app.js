@@ -19,7 +19,8 @@ const options = [
   { title: 'URL Search Params', path: './18-url-search-params/index.html' },
   { title: 'Session Storage (listado)', path: './19-session-storage-listado/index.html' },
   { title: 'Contador de navegaciones', path: './20-contador-navegacion/index.html' },
-  { title: 'Modo oscuro o claro', path: './21-modo-oscuro-claro/index.html' }
+  { title: 'Modo oscuro o claro', path: './21-modo-oscuro-claro/index.html' },
+  { title: 'Depositorio bancario (wizard)', path: './22-deposito-bancario-wizard/index.html' }
 ]
 
 function app() {
